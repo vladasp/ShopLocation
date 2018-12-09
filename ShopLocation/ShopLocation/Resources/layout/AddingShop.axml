@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Номер   магазина"
+            android:layout_margin="10dp"
+            android:textSize="25sp"
+            android:editable="false"
+            android:enabled="false"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addTextResultNum"
+            android:layout_margin="10dp"
+            android:textSize="25dp"
+            android:layout_weight="1"
+            android:numeric="integer"
+            android:hint="Номер   магазина" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Город"
+            android:layout_margin="10dp"
+            android:textSize="25sp"
+            android:editable="false"
+            android:enabled="false"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addTextResultCity"
+            android:layout_margin="10dp"
+            android:textSize="25dp"
+            android:layout_weight="1"
+            android:hint="Город" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Адрес"
+            android:layout_margin="10dp"
+            android:textSize="25sp"
+            android:editable="false"
+            android:enabled="false"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addTextResultAdress"
+            android:layout_margin="10dp"
+            android:textSize="25dp"
+            android:layout_weight="1"
+            android:hint="Адрес" />
+    </LinearLayout>
+    <Button
+        android:text="Добавить магазин"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addButton"
+        android:layout_gravity="center"
+        android:textSize="25sp" />
+</LinearLayout>

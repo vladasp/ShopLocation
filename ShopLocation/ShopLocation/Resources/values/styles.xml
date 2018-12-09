@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<resources>
+  <style name="MyTheme" parent="@android:style/Theme.Holo">
+    <item name="android:colorPrimary">@color/primaryBrand</item>
+		<item name="android:actionBarStyle">@style/MyActionBar</item>
+  </style>
+	
+	<style name="MyActionBar" parent="@android:style/Widget.Holo.ActionBar">
+		<item name="android:background">@color/primaryDark</item>
+	</style>
+	
+	<style name="MyTheme.Splash" parent="@android:style/Theme.Holo">
+    <item name="android:windowBackground">@drawable/splash_screen</item>
+    <item name="android:windowNoTitle">true</item>  
+  </style>
+	
+</resources>

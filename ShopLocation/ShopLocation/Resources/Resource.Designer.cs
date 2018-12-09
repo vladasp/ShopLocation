@@ -41,11 +41,72 @@ namespace ShopLocation
 			}
 		}
 		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7f040003
+			public const int negative = 2130968579;
+			
+			// aapt resource value: 0x7f040004
+			public const int positive = 2130968580;
+			
+			// aapt resource value: 0x7f040000
+			public const int primaryBrand = 2130968576;
+			
+			// aapt resource value: 0x7f040005
+			public const int primaryDark = 2130968581;
+			
+			// aapt resource value: 0x7f040001
+			public const int primaryFeature = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int primaryPage = 2130968578;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
+			{
+			}
+		}
+		
 		public partial class Drawable
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int ATB = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int ATB_Logo_nofon = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int ic_action_content_create = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int ic_action_content_save = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int ic_menu_copy_holo_dark = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int ic_menu_cut_holo_dark = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int ic_menu_paste_holo_dark = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int ic_menu_search_holo_dark = 2130837511;
+			
+			// aapt resource value: 0x7f020008
+			public const int Icon = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int splash_screen = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int ukratb_nofon = 2130837514;
 			
 			static Drawable()
 			{
@@ -57,11 +118,63 @@ namespace ShopLocation
 			}
 		}
 		
+		public partial class Id
+		{
+			
+			// aapt resource value: 0x7f080003
+			public const int addButton = 2131230723;
+			
+			// aapt resource value: 0x7f080002
+			public const int addTextResultAdress = 2131230722;
+			
+			// aapt resource value: 0x7f080001
+			public const int addTextResultCity = 2131230721;
+			
+			// aapt resource value: 0x7f080000
+			public const int addTextResultNum = 2131230720;
+			
+			// aapt resource value: 0x7f080006
+			public const int buttonGetAdress = 2131230726;
+			
+			// aapt resource value: 0x7f080005
+			public const int editTextInputNum = 2131230725;
+			
+			// aapt resource value: 0x7f08000a
+			public const int editTextResultAdress = 2131230730;
+			
+			// aapt resource value: 0x7f080009
+			public const int editTextResultCity = 2131230729;
+			
+			// aapt resource value: 0x7f080008
+			public const int editTextResultNum = 2131230728;
+			
+			// aapt resource value: 0x7f080004
+			public const int imageView1 = 2131230724;
+			
+			// aapt resource value: 0x7f080007
+			public const int linearLayout1 = 2131230727;
+			
+			// aapt resource value: 0x7f08000b
+			public const int menu_edit = 2131230731;
+			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Id()
+			{
+			}
+		}
+		
 		public partial class Layout
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int AddingShop = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Main = 2130903041;
 			
 			static Layout()
 			{
@@ -73,14 +186,30 @@ namespace ShopLocation
 			}
 		}
 		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f070000
+			public const int top_menus = 2131165184;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
+			{
+			}
+		}
+		
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int ApplicationName = 2131034113;
 			
-			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int Hello = 2131034112;
 			
 			static String()
 			{
@@ -88,6 +217,28 @@ namespace ShopLocation
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f060001
+			public const int MyActionBar = 2131099649;
+			
+			// aapt resource value: 0x7f060000
+			public const int MyTheme = 2131099648;
+			
+			// aapt resource value: 0x7f060002
+			public const int MyTheme_Splash = 2131099650;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

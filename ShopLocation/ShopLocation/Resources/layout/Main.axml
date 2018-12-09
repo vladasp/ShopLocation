@@ -3,5 +3,69 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="@android:color/holo_blue_dark">
+    <ImageView
+        android:src="@drawable/atb_logo_nofon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView1"
+        android:layout_margin="25dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+        <EditText
+            android:inputType="numberSigned"
+            android:layout_width="430.0dip"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextInputNum"
+            android:background="@android:color/background_light"
+            android:layout_gravity="center"
+            android:textColor="@android:color/background_dark"
+            android:numeric="integer"
+            android:textSize="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Номер магазина" />
+        <Button
+            android:text="Найти город"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonGetAdress"
+            android:textSize="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#122069" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_margin="10dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextResultNum"
+            android:text="Номер   магазина"
+            android:layout_margin="10dp"
+            android:textSize="25dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextResultCity"
+            android:text="Город"
+            android:layout_margin="10dp"
+            android:textSize="25dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextResultAdress"
+            android:text="Адрес"
+            android:layout_margin="10dp"
+            android:textSize="25dp" />
+    </LinearLayout>
 </LinearLayout>
