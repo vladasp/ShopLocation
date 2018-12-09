@@ -5,5 +5,5 @@
     <color name="primaryPage">#FFFFFF</color>
     <color name="negative">#e30000</color>
     <color name="positive">#59912a</color>
-		<color name="primaryDark">#203f70</color>
+    <color name="primaryDark">#203f70</color>
 </resources>

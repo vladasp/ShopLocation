@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using Android.App;
 using Android.Content;
 using Android.Content.Res;
@@ -33,43 +32,37 @@ namespace ShopLocation
 
             ActionBar.Title = "Поиск АТБ";
 
-            try
+            if(Strings.CustomPath == null)
+                Strings.CustomPath = GetExternalFilesDir(Android.OS.Environment.DirectoryPictures).AbsolutePath;
+
+            //Check directory
+            if(!Directory.Exists(Strings.CustomPath))
+                Directory.CreateDirectory(Strings.CustomPath);
+
+            if(!File.Exists(Strings.SourcePath))
             {
-                if (!File.Exists(Strings.SourcePath))
-                {
-                    AssetManager assets = Assets;
-                    StreamReader stream = null;
-                    //Open assets sourse
-                    var ass = assets.Open(Strings.AssetsFileName, Access.Streaming);
-                    stream = new StreamReader(ass);
+                var assets = Assets;
+                StreamReader stream = null;
+                //Open assets sourse
+                var ass = assets.Open(Strings.AssetsFileName, Access.Streaming);
+                stream = new StreamReader(ass);
 
-                    //Check directory
-                    if (!File.Exists(Strings.CustomPath))
-                    {
-                        Directory.CreateDirectory(Strings.CustomPath);
-                    }
+                //Write data to directory 
+                using(var streamWriter = new StreamWriter(Strings.SourcePath, true))
+                    streamWriter.WriteLine(stream.ReadToEnd());
 
-                    //Write data to directory 
-                    using (var streamWriter = new StreamWriter(Strings.SourcePath, true))
-                    {
-                        streamWriter.WriteLine(stream.ReadToEnd());
-                    }
-                }
-                string dataString = default(string);
-
-                //Read data from directory 
-                using (var reader = new StreamReader(Strings.SourcePath))
-                {
-                    dataString = reader.ReadToEnd();
-                }
-
-                JsonSerializerSettings settings = new JsonSerializerSettings();
-                var datas = JsonConvert.DeserializeObject<List<ShopModel>>(dataString);
-                initList = datas;
             }
-            catch (Exception ex)
+            var dataString = default(string);
+
+            //Read data from directory 
+            using(var reader = new StreamReader(Strings.SourcePath))
             {
+                dataString = reader.ReadToEnd();
             }
+
+            var settings = new JsonSerializerSettings();
+            var datas = JsonConvert.DeserializeObject<List<ShopModel>>(dataString);
+            initList = datas;
 
             DataStore.Create(initList);
 
@@ -121,11 +114,10 @@ namespace ShopLocation
         {
             HideKeyboard();
 
-            int number;
-            if(ValidateInputData(textInputNum.Text, out number))
+            if(ValidateInputData(textInputNum.Text, out int number))
             {
                 //TODO: Find from parsed data
-                ShopModel shop = DataStore.GetShop(number);
+                var shop = DataStore.GetShop(number);
 
                 if(shop != null)
                 {
@@ -156,22 +148,22 @@ namespace ShopLocation
             }
         }
 
-        void ClearEditFields()
+        private void ClearEditFields()
         {
             textResultNum.Text = "Номер магазина";
             textResultCity.Text = "Город";
             textResultAdress.Text = "Адрес";
         }
 
-        bool ValidateInputData(string numberStr, out int number)
+        private bool ValidateInputData(string numberStr, out int number)
         {
             return int.TryParse(numberStr, out number);
         }
 
-        void HideKeyboard()
+        private void HideKeyboard()
         {
-            InputMethodManager inputManager = (InputMethodManager)GetSystemService(InputMethodService);
-            inputManager.HideSoftInputFromWindow(CurrentFocus.WindowToken, HideSoftInputFlags.NotAlways);
+            var inputManager = (InputMethodManager)GetSystemService(InputMethodService);
+            inputManager.HideSoftInputFromWindow(CurrentFocus.WindowToken, HideSoftInputFlags.None);
         }
 
     }
